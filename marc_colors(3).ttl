@@ -1,0 +1,50 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix lab: <http://example.org/lab#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/marc/50d715e9-f3eb-4952-b2cd-819306907ac0> a ex:MARCRecord ;
+    rdfs:label "MARC Record" ;
+    dcterms:created "2025-02-19T05:44:38.699366" ;
+    dcterms:hasPart <http://example.org/marc/50d715e9-f3eb-4952-b2cd-819306907ac0/simulation/fading>,
+        <http://example.org/marc/50d715e9-f3eb-4952-b2cd-819306907ac0/simulation/restoration> ;
+    dcterms:identifier "(OCoLC)629696808" ;
+    dcterms:subject <http://example.org/marc/50d715e9-f3eb-4952-b2cd-819306907ac0/color/dark_greenish_blue> .
+
+<http://example.org/marc/50d715e9-f3eb-4952-b2cd-819306907ac0/color/dark_greenish_blue> a ex:ColorTerm ;
+    lab:hasA -9.259579e+00 ;
+    lab:hasB -1.796748e+01 ;
+    lab:hasHex "#134a5f" ;
+    lab:hasL 2.910753e+01 ;
+    lab:hasMunsell "5R 4/14" ;
+    lab:inputA -9.259579e+00 ;
+    lab:inputB -1.796748e+01 ;
+    lab:inputL 2.910753e+01 ;
+    skos:narrower "Black" ;
+    skos:prefLabel "Dark Greenish Blue" .
+
+<http://example.org/marc/50d715e9-f3eb-4952-b2cd-819306907ac0/simulation/fading> a ex:FadingSimulation ;
+    lab:dyeType "Synthetic" ;
+    lab:estimatedTimeToFade "4 years, 90 days, 9 hours, 18 minutes" ;
+    lab:fadingColorA -9.259579e+00 ;
+    lab:fadingColorB -1.796748e+01 ;
+    lab:fadingColorL 2.910753e+01 ;
+    lab:fadingDeltaE 5.375e-02 ;
+    lab:humidity 5e-01 ;
+    lab:lightIntensity 2.15e+02 ;
+    lab:temperature 2e+01 ;
+    lab:timeExposure 1e+03 .
+
+<http://example.org/marc/50d715e9-f3eb-4952-b2cd-819306907ac0/simulation/restoration> a ex:RestorationSimulation ;
+    lab:deltaE_CIE76 3.777353e+00 ;
+    lab:deltaE_CIEDE2000 2.529325e+00 ;
+    lab:deteriorationPrediction "Minor deterioration" ;
+    lab:originalColorA -9.259579e+00 ;
+    lab:originalColorB -1.796748e+01 ;
+    lab:originalColorL 2.910753e+01 ;
+    lab:targetColorA -6.81e+00 ;
+    lab:targetColorB -1.543e+01 ;
+    lab:targetColorL 3.046e+01 .
+
