@@ -199,8 +199,8 @@ def simulate_color_blindness(color: str, cb_type: str) -> str:
 # Page Configuration & Custom Styling
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="Enhanced LAB Color Explorer",
-    page_icon="🎨",
+    page_title="Library Special Collections Fading Data Repository",
+    page_icon="📚",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -828,12 +828,11 @@ st.markdown(
 # Main App Layout
 # -----------------------------------------------------------------------------
 st.markdown(
-    '<div class="main-header"><h1 style="text-align: center;">🎨 Enhanced LAB Color Explorer</h1>'
-    '<p style="text-align: center;">Explore color data with advanced science, interactive plots, and accessibility tools nyah~</p></div>',
+    '<div class="main-header"><h1 style="text-align: center;">Library Special Collections Fading Data Repository</h1>'
+    '<p style="text-align: center;">Store and analyze fading data for your library\'s special collection</p></div>',
     unsafe_allow_html=True
 )
 
-# Move left-side controls into the sidebar
 with st.sidebar:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.subheader("🗂️ TTL File Selection")
@@ -869,15 +868,15 @@ with st.sidebar:
 
     with st.expander("ℹ️ About this App"):
         st.markdown("""
-        **Enhanced LAB Color Explorer** is built for cultural heritage research and color science exploration.
+        **Library Special Collections Fading Data Repository** is designed for cultural heritage research. 
         
-        **Key Enhancements:**
-        - **Advanced ΔE Metrics:** Choose between CIE76, CIEDE2000, or CMC(l:c) based on your application.
-        - **Multiple Color Spaces:** Convert between HEX, LAB, sRGB, XYZ, HSL, and LCh.
-        - **Chromatic Adaptation:** Simulate viewing under different illuminants.
-        - **Accessibility:** Test visualizations with color blindness simulations.
+        **Key Features:**
+        - Store and analyze fading data from special collections.
+        - Advanced ΔE metrics for precise color difference calculations.
+        - Conversion between multiple color spaces.
+        - Chromatic adaptation and color blindness simulations.
         
-        *Note: Metamerism effects are briefly discussed here and further details can be found in the documentation.*
+        *Note: Detailed documentation is available for further information.*
         """)
     
     st.markdown('<div class="card">', unsafe_allow_html=True)
@@ -961,7 +960,6 @@ with st.sidebar:
         st.download_button("Download CSV", csv, "color_data.csv", "text/csv")
     st.markdown('</div>', unsafe_allow_html=True)
 
-# Main Visualization Area
 if st.session_state.current_graph is not None:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     if not st.session_state.color_terms.empty:
