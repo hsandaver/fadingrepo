@@ -1,0 +1,50 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <http://example.org/> .
+@prefix lab: <http://example.org/lab#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/marc/b0fcdb96-fd05-479c-900b-86b235de36eb> a ex:MARCRecord ;
+    rdfs:label "MARC Record" ;
+    dcterms:created "2025-02-23T23:13:27.609235" ;
+    dcterms:hasPart <http://example.org/marc/b0fcdb96-fd05-479c-900b-86b235de36eb/simulation/fading>,
+        <http://example.org/marc/b0fcdb96-fd05-479c-900b-86b235de36eb/simulation/restoration> ;
+    dcterms:identifier "(OCoLC)5870381" ;
+    dcterms:subject <http://example.org/marc/b0fcdb96-fd05-479c-900b-86b235de36eb/color/dark_grayish_yellowish_brown> .
+
+<http://example.org/marc/b0fcdb96-fd05-479c-900b-86b235de36eb/color/dark_grayish_yellowish_brown> a ex:ColorTerm ;
+    lab:hasA 5.264304e+00 ;
+    lab:hasB 8.813812e+00 ;
+    lab:hasHex "#4d3d33" ;
+    lab:hasL 2.717054e+01 ;
+    lab:hasMunsell "5R 4/14" ;
+    lab:inputA 5.264304e+00 ;
+    lab:inputB 8.813812e+00 ;
+    lab:inputL 2.717054e+01 ;
+    skos:narrower "Olive Green" ;
+    skos:prefLabel "Dark Grayish Yellowish Brown" .
+
+<http://example.org/marc/b0fcdb96-fd05-479c-900b-86b235de36eb/simulation/fading> a ex:FadingSimulation ;
+    lab:dyeType "Natural" ;
+    lab:estimatedTimeToFade "5 years, 359 days, 12 hours, 48 minutes" ;
+    lab:fadingColorA 5.264304e+00 ;
+    lab:fadingColorB 8.813812e+00 ;
+    lab:fadingColorL 2.717054e+01 ;
+    lab:fadingDeltaE 3.814697e-01 ;
+    lab:humidity 4.9e-01 ;
+    lab:lightIntensity 5.9e+01 ;
+    lab:temperature 2.4e+01 ;
+    lab:timeExposure 1e+04 .
+
+<http://example.org/marc/b0fcdb96-fd05-479c-900b-86b235de36eb/simulation/restoration> a ex:RestorationSimulation ;
+    lab:deltaE_CIE76 4.506932e+00 ;
+    lab:deltaE_CIEDE2000 3.944285e+00 ;
+    lab:deteriorationPrediction "Minor deterioration" ;
+    lab:originalColorA 5.264304e+00 ;
+    lab:originalColorB 8.813812e+00 ;
+    lab:originalColorL 2.717054e+01 ;
+    lab:targetColorA 2.45e+00 ;
+    lab:targetColorB 5.43e+00 ;
+    lab:targetColorL 2.62e+01 .
+
